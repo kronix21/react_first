@@ -1,0 +1,21 @@
+@import "./header.scss";
+@import "./footer.scss";
+@import "./home.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+};
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+

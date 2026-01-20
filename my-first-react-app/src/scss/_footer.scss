@@ -1,0 +1,104 @@
+.footer {
+    width: 100%;
+    height: 232px;
+    position: relative;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(238, 238, 238);
+    margin-top: auto;
+    display: flex;
+    color: #66727f;
+
+    .footer-indent{
+        display: flex;
+        gap: 123px;
+        align-items: start;
+        width: 1200px;
+        margin: auto auto;
+        padding: 32px 0;
+
+        .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 200px;
+        height: auto;
+        
+        img {
+            width: 70px;
+            height: 70px;
+        }
+
+        p {  
+            width: 150px;
+            height: auto;
+            color: rgb(238, 47, 83);
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            line-height: 17px;
+
+            span {
+                color: #0d4cd3;
+            }
+        }
+    }
+
+            .menu-footer {
+                width: 180px;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+
+                a {
+                    font-size: 18px;
+                    color: #66727f;
+
+                    &:hover {
+                        color: #31373d;
+                    }
+                }
+            }
+
+            .contact-info{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+
+                .goverAgency{
+                    height: auto;
+                    p{
+                        width: 150px;
+                        font-size: 18px;
+                        line-height: 25px;
+
+                        span{
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+
+            .social-icon{
+                width: auto;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+    }
+}
+
+
+
+
+

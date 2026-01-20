@@ -1,0 +1,99 @@
+.img-z{
+    position: absolute;
+    top: -13px;
+    left: 1800px;
+    font-size: 120px;
+    opacity: 0.03;
+}
+
+.login-block{
+    width: 500px;
+    height: 400px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 6px 20px rgba(13, 76, 211, 0.1);
+
+    h2{
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        color: #333;
+    }
+
+    form{
+        width: 400px;
+        height: 200px;
+
+        .input-login{
+            position: relative;
+            margin-bottom: 25px;
+            width: 100%;
+
+            input {
+                width: 400px;
+                padding: 16px 12px 8px; 
+                font-size: 16px;
+                border: 1px solid #b9b9b9;
+                border-radius: 8px;
+                outline: none;
+                transition: border-color 0.3s;
+            
+              &:focus {
+                    border-color: #0d4cd3;
+              }
+          
+             
+            &:not(:placeholder-shown) + label,
+            &:focus + label {
+                top: -10px;
+                left: 12px;
+                font-size: 12px;
+                color: #0d4cd3;
+                background-color: white;
+                padding: 0 4px;
+              }
+            }
+        
+            label {
+                position: absolute;
+                top: 14px;
+                left: 12px;
+                font-size: 16px;
+                color: #bdbaba;
+                pointer-events: none; 
+                transition: all 0.2s ease;
+            }
+        }
+
+        button{
+            width: 400px;
+            height: 40px;
+            background: none;
+            border-radius: 18px;
+            color: #0d4cd3;
+            font-size: 16px;
+            font-weight: 600; 
+            cursor: pointer;
+            border: 2px solid #0d4cd3;
+
+            &:hover{
+                color: white;
+                background-color: #0d4cd3;
+                transition: ease-in 0.2s;
+            }
+        }
+    }
+
+    .qestion-login{
+        font-size: 16px;
+        font-weight: 500;
+
+        a{
+            color: #0d4cd3;
+        }
+    }
+}

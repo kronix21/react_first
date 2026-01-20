@@ -1,0 +1,77 @@
+.profile-page {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 80%);
+    min-height: 80vh;
+    padding: 40px 20px;
+    margin-top: 85px;
+
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+
+        h1 {
+            color: #666;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 32px;
+        }
+
+        .card {
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            padding: 32px;
+            margin-bottom: 32px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+
+            .info-item {
+                height: 60px;
+                display: flex;
+                margin-bottom: 20px;
+                align-items: center;
+                border-bottom: 0.2px solid rgba(0, 0, 0, 0.1);
+                border-radius: 5px;
+
+                strong {
+                    color: #34495e;
+                    font-weight: 600;
+                    min-width: 120px;
+                    font-size: 16px;
+                }
+
+                span {
+                    color: #2c3e50;
+                    font-size: 16px;
+                    flex: 1;
+                }
+            }
+        }
+
+        .logout-btn {
+            background: linear-gradient(to right, #839ce0, #aebef1);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 10px rgba(194, 194, 194, 0.3);
+
+            &:hover {
+                background: linear-gradient(to right, #4354f3, #1e21c4);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 14px rgba(212, 207, 206, 0.4);
+            }
+        }
+    }
+}
