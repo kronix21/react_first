@@ -34,7 +34,7 @@ function Request() {
     } else {
       setRequests(savedRequests);
     }
-  }, [location.state]);
+  }, [location.state, navigate]);
 
   const handleDelete = (idToDelete) => {
     const updated = requests.filter(req => req.id !== idToDelete);
