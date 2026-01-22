@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import './../scss/_request.scss'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function Request() {
   const location = useLocation();
   const [requests, setRequests] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let savedRequests = JSON.parse(localStorage.getItem('requests')) || [];
@@ -16,6 +17,7 @@ function Request() {
         const statuses = ['в обработке', 'выполнено', 'отклонено'];
         const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
         const newRequest = {
+          id: Date.now(),
           number: savedRequests.length + 1,
           title: location.state.service.title,
           status: randomStatus,
@@ -24,20 +26,19 @@ function Request() {
         const updatedRequests = [...savedRequests, newRequest];
         setRequests(updatedRequests);
         localStorage.setItem('requests', JSON.stringify(updatedRequests));
+        navigate('.', { replace: true, state: null });
       } else {
         setRequests(savedRequests);
+        navigate('.', { replace: true, state: null });
       }
     } else {
       setRequests(savedRequests);
     }
   }, [location.state]);
 
-  const handleDelete = (indexToDelete) => {
-    const updated = requests.filter((_, index) => index !== indexToDelete);
-    const renumbered = updated.map((req, i) => ({
-      ...req,
-      number: i + 1,
-    }));
+  const handleDelete = (idToDelete) => {
+    const updated = requests.filter(req => req.id !== idToDelete);
+    const renumbered = updated.map((req, i) => ({ ...req, number: i + 1 }));
     setRequests(renumbered);
     localStorage.setItem('requests', JSON.stringify(renumbered));
   };
@@ -49,14 +50,14 @@ function Request() {
         <div className='content-request'>
           <ul>
             {requests.length > 0 ? (
-              requests.map((req, index) => (
-                <li key={req.number}>
+              requests.map((req) => (
+                <li key={req.id}>
                   <p>Заявление №{req.number}: {req.title}</p>
                   <div className='status-request'>
                     <p>
                       Статус: {req.status}
                     </p>
-                    <button onClick={() => handleDelete(index)}>
+                    <button onClick={() => handleDelete(req.id)}>
                       Удалить
                     </button>
                   </div>
