@@ -14,13 +14,11 @@ function Request() {
       const exists = savedRequests.some(req => req.title === location.state.service.title);
 
       if (!exists) {
-        const statuses = ['в обработке', 'выполнено', 'отклонено'];
-        const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
         const newRequest = {
           id: Date.now(),
           number: savedRequests.length + 1,
           title: location.state.service.title,
-          status: randomStatus,
+          status: 'в обработке'
         };
 
         const updatedRequests = [...savedRequests, newRequest];

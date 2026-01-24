@@ -65,7 +65,7 @@ const SignIn = () => {
                     />
                     <label>Пароль:</label>
                 </div>
-                <button type="submit" className='login-btn'>Войти</button>
+                <button className='login-btn'>Войти</button>
             </form>
             <p className='qestion-login'>
                 Нет аккаунта?

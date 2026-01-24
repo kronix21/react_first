@@ -1,0 +1,25 @@
+.login-block{
+    width: 500px;
+    height: 450px;
+
+    h2{
+        font-size: 19px;
+        margin-bottom: 16px;
+    }
+
+    form{
+        width: 80%;
+        height: 80%;
+    }
+
+    .service-actions{
+        width: 100%;
+        border: none;
+        padding: 0;
+
+        .btn-secondary{
+            width: 50%;
+            padding: 8px;
+        }
+    }
+}

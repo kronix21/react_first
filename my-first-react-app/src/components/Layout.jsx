@@ -5,7 +5,7 @@ import Footer from './footer';
 
 const Layout = () => {
     const location = useLocation();
-    const hideLayout = ['/signIn', '/reg'].includes(location.pathname);
+    const hideLayout = ['/signIn', '/reg', '/form'].includes(location.pathname);
 
     return (
         <>  

@@ -363,7 +363,7 @@ function Service() {
                 {isAuthenticated ? (
                 <button onClick={() => {
                         if (selectedService) {
-                          navigate('/request', { state: { service: selectedService } });
+                          navigate('/form', { state: { service: selectedService } });
                         }
                           closeModal();
                         }} className="btn-secondary">

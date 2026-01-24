@@ -6,6 +6,7 @@ import SignIn from '../pages/SignIn';
 import Help from '../pages/Help';
 import Request from '../pages/Request';
 import Profile from '../pages/Profile';
+import Form from '../pages/Form';
 
 const Routers = () => {
     return (
@@ -18,6 +19,7 @@ const Routers = () => {
             <Route path="/help" element={<Help />} />
             <Route path="/request" element={<Request />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/form" element={<Form />} />
         </Routes>
     )
 };
