@@ -1,6 +1,9 @@
 .login-block{
     width: 500px;
     height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     h2{
         font-size: 19px;

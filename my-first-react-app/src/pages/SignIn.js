@@ -44,7 +44,7 @@ const SignIn = () => {
             <h2>Вход</h2>
             <p className='img-z'>Z</p>
             {error && <p style={{ color: 'red', marginBottom:'15px' }}>{error}</p>}
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className='form-login'>
                 <div className='input-login'>
                     <input
                         type="email"
